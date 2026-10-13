@@ -1,4 +1,0 @@
-spaCy
-pandas
-bokeh
-atap_widgets

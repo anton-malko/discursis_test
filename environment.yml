@@ -1,0 +1,37 @@
+name: discursis
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Try to install everything via conda where possible,
+  #   makes for simpler and quicker installs
+  - python=3.10
+  - spacy=3.4.0
+  - spacy-model-en_core_web_sm=3.4.0
+  - pandas
+  - openpyxl
+  # xlsxwriter needed for atap_widgets exports
+  - xlsxwriter
+  - jupyterlab>=3.0,<4.0
+  - ipywidgets>=8.0,<9.0
+  - jupyter-server-proxy
+  - matplotlib
+  - jupytext
+  - pre-commit
+  - black[jupyter]
+  - bokeh
+  - jupyter_bokeh
+  - pytest
+  - nbmake
+  - nbqa
+  - nbval
+  - nbformat
+  - click
+  - pip
+  - pip:
+    # Textacy currently not on conda-forge for arm64,
+    # hopefully should be fixed soon
+    - textacy==0.12.0
+    - atap_widgets==0.5.4
+variables:
+  BINDER_EXTERNAL_URL: https://notebooks.gesis.org/
